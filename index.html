@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A deployable personal AI agent that answers questions about Abhishek, his projects, skills, and resume highlights.">
+    <meta property="og:title" content="Abhi's AI">
+    <meta property="og:description" content="A personal AI portfolio agent for projects, skills, resume highlights, and contact links.">
+    <meta property="og:type" content="website">
+    <title>Abhi's AI</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="signalCanvas" aria-hidden="true"></canvas>
+    <main class="shell">
+      <section class="robot-stage" aria-labelledby="appTitle">
+        <div class="status-row">
+          <span class="status-dot"></span>
+          <span>Grand line profile agent</span>
+        </div>
+        <h1 id="appTitle">Abhi's AI</h1>
+        <p class="lede">A pirate-anime inspired AI captain that answers only from Abhishek's public profile.</p>
+
+        <button id="robotAvatar" class="robot-avatar" type="button" aria-label="Make Abhi's AI speak">
+          <span class="speech-bubble" id="robotSpeech">Tap the captain. I can talk about Abhishek's AI/ML projects, data skills, dashboards, and public profile.</span>
+          <span class="robot-glow"></span>
+          <span class="swordsman-aura" aria-hidden="true">
+            <span class="sword sword-one"></span>
+            <span class="sword sword-two"></span>
+            <span class="sword sword-three"></span>
+          </span>
+          <span class="robot">
+            <span class="antenna"></span>
+            <span class="pirate-hat">
+              <span class="hat-brim"></span>
+              <span class="hat-crown"></span>
+              <span class="hat-mark"></span>
+            </span>
+            <span class="head">
+              <span class="visor">
+                <span class="eye left-eye"></span>
+                <span class="eye right-eye"></span>
+              </span>
+              <span class="mouth"></span>
+            </span>
+            <span class="neck"></span>
+            <span class="body-core">
+              <span class="core-ring"></span>
+              <span class="core-dot"></span>
+              <span class="circuit c1"></span>
+              <span class="circuit c2"></span>
+              <span class="circuit c3"></span>
+            </span>
+            <span class="arm left-arm"></span>
+            <span class="arm right-arm"></span>
+            <span class="base"></span>
+          </span>
+        </button>
+
+        <div class="signal-board" aria-label="Agent capabilities">
+          <div>
+            <span>Navigator</span>
+            <strong>12 intents</strong>
+          </div>
+          <div>
+            <span>Treasure log</span>
+            <strong>Grounded</strong>
+          </div>
+          <div>
+            <span>Secret map</span>
+            <strong>Private</strong>
+          </div>
+        </div>
+        <div class="profile-strip" aria-label="Profile snapshot">
+          <div>
+            <span class="label">Role</span>
+            <strong id="profileRole">AI Builder</strong>
+          </div>
+          <div>
+            <span class="label">Focus</span>
+            <strong id="profileFocus">Agents and useful apps</strong>
+          </div>
+          <div>
+            <span class="label">Location</span>
+            <strong id="profileLocation">India</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="agent-panel" aria-label="Chat with personal AI">
+        <div class="panel-header">
+          <div>
+            <span class="eyebrow">Live demo</span>
+            <h2>Captain console</h2>
+          </div>
+          <div class="header-actions">
+            <span id="intentBadge" class="intent-badge">Ready</span>
+            <button id="resetChat" class="ghost-button" type="button" aria-label="Reset chat">Reset</button>
+          </div>
+        </div>
+
+        <div class="cat-perch" aria-hidden="true">
+          <span class="cat">
+            <span class="cat-tail"></span>
+            <span class="cat-body"></span>
+            <span class="cat-head">
+              <span class="cat-ear cat-ear-left"></span>
+              <span class="cat-ear cat-ear-right"></span>
+              <span class="cat-eye cat-eye-left"></span>
+              <span class="cat-eye cat-eye-right"></span>
+              <span class="cat-mouth"></span>
+            </span>
+            <span class="cat-leg cat-leg-one"></span>
+            <span class="cat-leg cat-leg-two"></span>
+          </span>
+          <span class="sleep-mark">z</span>
+          <span class="sleep-mark sleep-two">z</span>
+        </div>
+
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+        <div id="suggestions" class="suggestions" aria-label="Suggested questions"></div>
+
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="questionInput">Ask a question</label>
+          <input id="questionInput" name="question" type="text" autocomplete="off" placeholder="Ask the captain about ML projects, skills, career fit, or public profile...">
+          <button type="submit">Ask</button>
+        </form>
+      </section>
+    </main>
+
+    <section class="insights" aria-label="Project highlights">
+      <div>
+        <span class="eyebrow">Treasure map</span>
+        <h2>A portfolio quest with grounded answers, privacy rules, and deployable code.</h2>
+      </div>
+      <div class="insight-grid">
+        <article>
+          <span>01</span>
+          <h3>Treasure-log answers</h3>
+          <p>Every response comes from a structured profile file, so the assistant stays focused on you and your work.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>No cursed keys</h3>
+          <p>The demo works as a static website, which makes it safe for GitHub Pages and easy for recruiters to open.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>New-world upgrade</h3>
+          <p>You can later connect OpenAI, vector search, analytics, voice, or a resume PDF parser without replacing the UI.</p>
+        </article>
+      </div>
+    </section>
+
+    <script src="data/profile.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
